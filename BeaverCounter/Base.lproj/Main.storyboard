@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a8h-fT-VVK">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Game View Controller-->
+        <scene sceneID="B3V-RD-EXl">
+            <objects>
+                <viewController id="OAF-Gk-T6U" customClass="NewGameViewController" customModule="BreakfastFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u4w-Yh-gvf"/>
+                        <viewControllerLayoutGuide type="bottom" id="03k-Xw-Yom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g8t-r0-1uY">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="UZb-GG-2HW" userLabel="Image Background">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="how_many_players" translatesAutoresizingMaskIntoConstraints="NO" id="bVT-Ix-pEp" userLabel="Image How many Players?">
+                                <rect key="frame" x="114.5" y="50" width="438" height="36"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHQ-H8-7L4" userLabel="Button Cancel">
+                                <rect key="frame" x="70" y="289" width="142" height="36"/>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <segue destination="a8h-fT-VVK" kind="show" identifier="cancel" animates="NO" id="oKa-fN-5oB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJ4-LD-NH4" userLabel="Button OK">
+                                <rect key="frame" x="531" y="289" width="66" height="36"/>
+                                <state key="normal" image="ok"/>
+                                <connections>
+                                    <segue destination="a8h-fT-VVK" kind="show" identifier="ok" animates="NO" id="Ufg-pJ-SDy"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pcA-9w-ukf">
+                                <rect key="frame" x="70" y="155.5" width="527" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzD-lU-Yaj" userLabel="Button 2 Players">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" label="2 Players"/>
+                                        <state key="normal" image="digit_large_2"/>
+                                        <connections>
+                                            <action selector="selectNumberOfPlayers:" destination="OAF-Gk-T6U" eventType="touchUpInside" id="EBS-1V-pr0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEb-2D-02O" userLabel="Button 3 Players">
+                                        <rect key="frame" x="116" y="0.0" width="64" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" label="3 Players"/>
+                                        <state key="normal" image="digit_large_3"/>
+                                        <connections>
+                                            <action selector="selectNumberOfPlayers:" destination="OAF-Gk-T6U" eventType="touchUpInside" id="L6G-4d-aNT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9h-pY-lON" userLabel="Button 4 Players">
+                                        <rect key="frame" x="231.5" y="0.0" width="64" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" label="4 Players"/>
+                                        <state key="normal" image="digit_large_4"/>
+                                        <connections>
+                                            <action selector="selectNumberOfPlayers:" destination="OAF-Gk-T6U" eventType="touchUpInside" id="NCx-xB-Fw2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcN-E9-eDR" userLabel="Button 5 Players">
+                                        <rect key="frame" x="347.5" y="0.0" width="64" height="64"/>
+                                        <accessibility key="accessibilityConfiguration" label="5 Players"/>
+                                        <state key="normal" image="digit_large_5"/>
+                                        <connections>
+                                            <action selector="selectNumberOfPlayers:" destination="OAF-Gk-T6U" eventType="touchUpInside" id="cSD-C5-zS2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd0-jj-b0D" userLabel="Button 6 Players">
+                                        <rect key="frame" x="463" y="0.0" width="64" height="64"/>
+                                        <state key="normal" image="digit_large_6"/>
+                                        <connections>
+                                            <action selector="selectNumberOfPlayers:" destination="OAF-Gk-T6U" eventType="touchUpInside" id="5sh-B9-tNz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pcA-9w-ukf" firstAttribute="leading" secondItem="g8t-r0-1uY" secondAttribute="leadingMargin" constant="50" id="1Wf-1R-FaO"/>
+                            <constraint firstItem="UZb-GG-2HW" firstAttribute="centerX" secondItem="g8t-r0-1uY" secondAttribute="centerX" id="3jv-Hz-B41"/>
+                            <constraint firstItem="pcA-9w-ukf" firstAttribute="centerY" secondItem="g8t-r0-1uY" secondAttribute="centerY" id="Chl-56-MPc"/>
+                            <constraint firstItem="03k-Xw-Yom" firstAttribute="top" secondItem="uJ4-LD-NH4" secondAttribute="bottom" constant="50" id="DHx-nH-mym"/>
+                            <constraint firstItem="UZb-GG-2HW" firstAttribute="leading" secondItem="g8t-r0-1uY" secondAttribute="leading" id="ECp-Wj-9BI"/>
+                            <constraint firstItem="cHQ-H8-7L4" firstAttribute="leading" secondItem="g8t-r0-1uY" secondAttribute="leadingMargin" constant="50" id="EKe-Zg-sWi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uJ4-LD-NH4" secondAttribute="trailing" constant="50" id="Kbk-MT-ScZ"/>
+                            <constraint firstItem="bVT-Ix-pEp" firstAttribute="top" secondItem="u4w-Yh-gvf" secondAttribute="bottom" constant="50" id="LSa-9H-q8p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pcA-9w-ukf" secondAttribute="trailing" constant="50" id="La5-bz-gme"/>
+                            <constraint firstItem="03k-Xw-Yom" firstAttribute="top" secondItem="UZb-GG-2HW" secondAttribute="bottom" id="U2L-Px-ONi"/>
+                            <constraint firstItem="UZb-GG-2HW" firstAttribute="top" secondItem="u4w-Yh-gvf" secondAttribute="bottom" id="WJf-C1-apm"/>
+                            <constraint firstAttribute="trailing" secondItem="UZb-GG-2HW" secondAttribute="trailing" id="aqk-GA-yDF"/>
+                            <constraint firstItem="03k-Xw-Yom" firstAttribute="top" secondItem="cHQ-H8-7L4" secondAttribute="bottom" constant="50" id="gAS-ES-qkv"/>
+                            <constraint firstItem="bVT-Ix-pEp" firstAttribute="centerX" secondItem="g8t-r0-1uY" secondAttribute="centerX" id="sDr-qb-h09"/>
+                            <constraint firstItem="UZb-GG-2HW" firstAttribute="centerY" secondItem="g8t-r0-1uY" secondAttribute="centerY" id="vLP-0V-g27"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="62P-PO-2yU"/>
+                    <connections>
+                        <outlet property="okButton" destination="uJ4-LD-NH4" id="FOc-4w-Ube"/>
+                        <outletCollection property="numberOfPlayerButtons" destination="hzD-lU-Yaj" collectionClass="NSMutableArray" id="Ubp-Sv-TBl"/>
+                        <outletCollection property="numberOfPlayerButtons" destination="zEb-2D-02O" collectionClass="NSMutableArray" id="HPk-GU-9go"/>
+                        <outletCollection property="numberOfPlayerButtons" destination="N9h-pY-lON" collectionClass="NSMutableArray" id="pBm-1u-5rd"/>
+                        <outletCollection property="numberOfPlayerButtons" destination="pcN-E9-eDR" collectionClass="NSMutableArray" id="9rO-c3-Jeu"/>
+                        <outletCollection property="numberOfPlayerButtons" destination="Wd0-jj-b0D" collectionClass="NSMutableArray" id="iJ4-WZ-zgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Te-bP-oKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536.58170914542734" y="-951.20000000000005"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="jld-CG-MoV">
+            <objects>
+                <viewController id="a8h-fT-VVK" customClass="HomeViewController" customModule="BreakfastFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rec-i9-et9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yga-xK-yEH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eqc-UE-12I">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="k2X-5n-xvY" userLabel="Image Background">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4m-pD-zDM" userLabel="Button New Game">
+                                <rect key="frame" x="222.5" y="50" width="222" height="36"/>
+                                <state key="normal" image="new_game"/>
+                                <connections>
+                                    <segue destination="OAF-Gk-T6U" kind="show" identifier="newGame" animates="NO" id="DOz-6Q-ynf"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-Tt-cRF" userLabel="Stack View Round x">
+                                <rect key="frame" x="240.5" y="254.5" width="186" height="36"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="round" translatesAutoresizingMaskIntoConstraints="NO" id="NCq-p9-r4e">
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="36"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="O8v-Sm-exb">
+                                        <rect key="frame" x="156" y="0.0" width="30" height="36"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="cl3-px-lLK" userLabel="Scores">
+                                <rect key="frame" x="26.5" y="150.5" width="614" height="74"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="h6u-ef-l9Y" userLabel="Stack View Player 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="74"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="reZ-WV-IAX" userLabel="Stack View Px">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p1" translatesAutoresizingMaskIntoConstraints="NO" id="KLN-SO-TYg" userLabel="Image Px">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="NSf-fN-yoj" userLabel="Stack View Score">
+                                                <rect key="frame" x="0.0" y="42" width="79" height="32"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_2" translatesAutoresizingMaskIntoConstraints="NO" id="sem-Sp-593" userLabel="Image Digit 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_1" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-0q-70z" userLabel="Image Digit 10">
+                                                        <rect key="frame" x="25" y="0.0" width="24" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="R5l-xG-cvO" userLabel="Image Digit 100">
+                                                        <rect key="frame" x="49" y="0.0" width="30" height="32"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0Uh-gA-PSf" userLabel="Stack View Player 2">
+                                        <rect key="frame" x="107" y="0.0" width="79" height="74"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="czB-7C-qzX" userLabel="Stack View Px">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p2" translatesAutoresizingMaskIntoConstraints="NO" id="UEl-wk-drY" userLabel="Image Px">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="i8A-7t-Cm6" userLabel="Stack View Score">
+                                                <rect key="frame" x="0.0" y="42" width="79" height="32"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_2" translatesAutoresizingMaskIntoConstraints="NO" id="8Ls-bN-nNE" userLabel="Image Digit 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_1" translatesAutoresizingMaskIntoConstraints="NO" id="jrG-qK-UTE" userLabel="Image Digit 10">
+                                                        <rect key="frame" x="25" y="0.0" width="24" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="N4k-wu-xCv" userLabel="Image Digit 100">
+                                                        <rect key="frame" x="49" y="0.0" width="30" height="32"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="4Ck-jl-xou" userLabel="Stack View Player 3">
+                                        <rect key="frame" x="214" y="0.0" width="79" height="74"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="uDV-ea-PYG" userLabel="Stack View Px">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p3" translatesAutoresizingMaskIntoConstraints="NO" id="whh-mO-13j" userLabel="Image Px">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCX-3G-rgD" userLabel="Stack View Score">
+                                                <rect key="frame" x="0.0" y="42" width="79" height="32"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_2" translatesAutoresizingMaskIntoConstraints="NO" id="snR-cT-epo" userLabel="Image Digit 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_1" translatesAutoresizingMaskIntoConstraints="NO" id="o9A-GT-ELd" userLabel="Image Digit 10">
+                                                        <rect key="frame" x="25" y="0.0" width="24" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="6HK-xI-SdH" userLabel="Image Digit 100">
+                                                        <rect key="frame" x="49" y="0.0" width="30" height="32"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-tu-XxV" userLabel="Stack View Player 4">
+                                        <rect key="frame" x="321" y="0.0" width="79" height="74"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ZHc-DR-CNn" userLabel="Stack View Px">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p4" translatesAutoresizingMaskIntoConstraints="NO" id="7IT-qU-IvP" userLabel="Image Px">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vp-c5-tMm" userLabel="Stack View Score">
+                                                <rect key="frame" x="0.0" y="42" width="79" height="32"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_2" translatesAutoresizingMaskIntoConstraints="NO" id="KpS-6D-zeT" userLabel="Image Digit 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_1" translatesAutoresizingMaskIntoConstraints="NO" id="3sr-aa-Koq" userLabel="Image Digit 10">
+                                                        <rect key="frame" x="25" y="0.0" width="24" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="swi-tb-0gE" userLabel="Image Digit 100">
+                                                        <rect key="frame" x="49" y="0.0" width="30" height="32"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="c5C-Y3-edn" userLabel="Stack View Player 5">
+                                        <rect key="frame" x="428" y="0.0" width="79" height="74"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="a3B-Di-JBn" userLabel="Stack View Px">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p5" translatesAutoresizingMaskIntoConstraints="NO" id="xXV-JA-9v2" userLabel="Image Px">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6ni-uF-VtU" userLabel="Stack View Score">
+                                                <rect key="frame" x="0.0" y="42" width="79" height="32"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_2" translatesAutoresizingMaskIntoConstraints="NO" id="eiy-D8-96J" userLabel="Image Digit 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_1" translatesAutoresizingMaskIntoConstraints="NO" id="va6-tQ-Pf4" userLabel="Image Digit 10">
+                                                        <rect key="frame" x="25" y="0.0" width="24" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="tA9-nQ-LXN" userLabel="Image Digit 100">
+                                                        <rect key="frame" x="49" y="0.0" width="30" height="32"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-BE-HN9" userLabel="Stack View Player 6">
+                                        <rect key="frame" x="535" y="0.0" width="79" height="74"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R1s-b1-Tid" userLabel="Stack View Px">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p6" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-Ff-Trk" userLabel="Image Px">
+                                                        <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36J-Mm-AAh" userLabel="Stack View Score">
+                                                <rect key="frame" x="0.0" y="42" width="79" height="32"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_2" translatesAutoresizingMaskIntoConstraints="NO" id="YSn-Iz-rMZ" userLabel="Image Digit 1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_1" translatesAutoresizingMaskIntoConstraints="NO" id="Njw-LZ-zQf" userLabel="Image Digit 10">
+                                                        <rect key="frame" x="25" y="0.0" width="24" height="32"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="KXk-Z5-nLz" userLabel="Image Digit 100">
+                                                        <rect key="frame" x="49" y="0.0" width="30" height="32"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z95-iE-Hja" userLabel="Button Scan">
+                                <rect key="frame" x="278.5" y="319" width="110" height="36"/>
+                                <state key="normal" image="scan"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="scan" animates="NO" id="4eO-Bu-juh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P4m-pD-zDM" firstAttribute="top" secondItem="rec-i9-et9" secondAttribute="bottom" constant="50" id="02u-Su-40h"/>
+                            <constraint firstItem="Yga-xK-yEH" firstAttribute="top" secondItem="Z95-iE-Hja" secondAttribute="bottom" constant="20" id="0aH-ZG-YKC"/>
+                            <constraint firstItem="k2X-5n-xvY" firstAttribute="top" secondItem="rec-i9-et9" secondAttribute="bottom" id="4RX-Ja-llX"/>
+                            <constraint firstItem="cl3-px-lLK" firstAttribute="centerY" secondItem="eqc-UE-12I" secondAttribute="centerY" id="5bf-bZ-Gy7"/>
+                            <constraint firstItem="Z95-iE-Hja" firstAttribute="centerX" secondItem="eqc-UE-12I" secondAttribute="centerX" id="72F-or-vdM"/>
+                            <constraint firstItem="Yga-xK-yEH" firstAttribute="top" secondItem="k2X-5n-xvY" secondAttribute="bottom" id="90r-pl-yYv"/>
+                            <constraint firstItem="PFC-Tt-cRF" firstAttribute="top" secondItem="cl3-px-lLK" secondAttribute="bottom" constant="30" id="AZd-Tr-iYc"/>
+                            <constraint firstItem="P4m-pD-zDM" firstAttribute="centerX" secondItem="eqc-UE-12I" secondAttribute="centerX" id="QN1-i2-30D"/>
+                            <constraint firstItem="PFC-Tt-cRF" firstAttribute="centerX" secondItem="eqc-UE-12I" secondAttribute="centerX" id="bI6-I2-bOK"/>
+                            <constraint firstAttribute="trailing" secondItem="k2X-5n-xvY" secondAttribute="trailing" id="czA-Xd-3Cy"/>
+                            <constraint firstItem="k2X-5n-xvY" firstAttribute="centerX" secondItem="eqc-UE-12I" secondAttribute="centerX" id="khS-iL-gs9"/>
+                            <constraint firstItem="k2X-5n-xvY" firstAttribute="centerY" secondItem="eqc-UE-12I" secondAttribute="centerY" id="sPK-ej-jla"/>
+                            <constraint firstItem="k2X-5n-xvY" firstAttribute="leading" secondItem="eqc-UE-12I" secondAttribute="leading" id="vAA-Hd-1zL"/>
+                            <constraint firstItem="cl3-px-lLK" firstAttribute="centerX" secondItem="eqc-UE-12I" secondAttribute="centerX" id="wzT-qO-PIg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qk1-mQ-VcY"/>
+                    <connections>
+                        <outlet property="roundStackView" destination="PFC-Tt-cRF" id="E3m-hp-o5f"/>
+                        <outlet property="scanButton" destination="Z95-iE-Hja" id="hoc-pZ-4kP"/>
+                        <outletCollection property="scoreStackViews" destination="h6u-ef-l9Y" collectionClass="NSMutableArray" id="ZUG-Y2-cxY"/>
+                        <outletCollection property="scoreStackViews" destination="0Uh-gA-PSf" collectionClass="NSMutableArray" id="kXu-4n-1yp"/>
+                        <outletCollection property="scoreStackViews" destination="4Ck-jl-xou" collectionClass="NSMutableArray" id="F1M-0w-Ihn"/>
+                        <outletCollection property="scoreStackViews" destination="bsa-tu-XxV" collectionClass="NSMutableArray" id="Xj3-wf-IkJ"/>
+                        <outletCollection property="scoreStackViews" destination="c5C-Y3-edn" collectionClass="NSMutableArray" id="Odt-M2-Pzc"/>
+                        <outletCollection property="scoreStackViews" destination="xkZ-BE-HN9" collectionClass="NSMutableArray" id="F2r-Wl-JaF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OjZ-EH-dHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.43328335832086" y="-951.20000000000005"/>
+        </scene>
+        <!--Vision Object Recognition View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VisionObjectRecognitionViewController" customModule="BreakfastFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="UBx-NJ-vmI" userLabel="Stack View Player">
+                                <rect key="frame" x="288.5" y="150.5" width="90" height="74"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p1" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-gA-hTV" userLabel="Image Px">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="36"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="TMF-BV-Y4K" userLabel="Stack View Score">
+                                        <rect key="frame" x="0.0" y="42" width="90" height="32"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="YZU-Kf-g0w" userLabel="Image Digit 1">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="32"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-Db-2GH" userLabel="Image Digit 2">
+                                                <rect key="frame" x="30" y="0.0" width="30" height="32"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digit_0" translatesAutoresizingMaskIntoConstraints="NO" id="Ggx-ev-2M1" userLabel="Image Digit 3">
+                                                <rect key="frame" x="60" y="0.0" width="30" height="32"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2g5-jZ-xcz" userLabel="Button Cancel">
+                                <rect key="frame" x="70" y="289" width="142" height="36"/>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <segue destination="a8h-fT-VVK" kind="show" identifier="cancel" animates="NO" id="yGx-cq-e6D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7t-Ph-wZh" userLabel="Button OK">
+                                <rect key="frame" x="531" y="289" width="66" height="36"/>
+                                <state key="normal" image="ok"/>
+                                <connections>
+                                    <segue destination="a8h-fT-VVK" kind="show" identifier="ok" animates="NO" id="CWB-PW-zOl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UBx-NJ-vmI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSb-qj-AZe"/>
+                            <constraint firstItem="2g5-jZ-xcz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="Q6a-7Z-cCk"/>
+                            <constraint firstItem="UBx-NJ-vmI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bpe-uI-ukf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F7t-Ph-wZh" secondAttribute="bottom" constant="50" id="oTi-lg-uzS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2g5-jZ-xcz" secondAttribute="bottom" constant="50" id="pLl-Wp-w2E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F7t-Ph-wZh" secondAttribute="trailing" constant="50" id="wX9-pp-MZS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZeH-ep-sAx"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="2g5-jZ-xcz" id="A83-JO-Q1H"/>
+                        <outlet property="okButton" destination="F7t-Ph-wZh" id="aZ3-DT-DdO"/>
+                        <outlet property="playerStackView" destination="UBx-NJ-vmI" id="jFz-k7-tRm"/>
+                        <outlet property="previewView" destination="8bC-Xf-vdC" id="KdU-3x-Jsv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="225"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CWB-PW-zOl"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="background" width="960" height="540"/>
+        <image name="cancel" width="142" height="36"/>
+        <image name="digit_0" width="30" height="32"/>
+        <image name="digit_1" width="24" height="32"/>
+        <image name="digit_2" width="25" height="32"/>
+        <image name="digit_large_2" width="64" height="64"/>
+        <image name="digit_large_3" width="64" height="64"/>
+        <image name="digit_large_4" width="64" height="64"/>
+        <image name="digit_large_5" width="64" height="64"/>
+        <image name="digit_large_6" width="64" height="64"/>
+        <image name="how_many_players" width="438" height="36"/>
+        <image name="new_game" width="222" height="36"/>
+        <image name="ok" width="66" height="36"/>
+        <image name="p1" width="54" height="36"/>
+        <image name="p2" width="58" height="36"/>
+        <image name="p3" width="60" height="36"/>
+        <image name="p4" width="60" height="36"/>
+        <image name="p5" width="60" height="36"/>
+        <image name="p6" width="62" height="36"/>
+        <image name="round" width="144" height="36"/>
+        <image name="scan" width="110" height="36"/>
+    </resources>
+</document>
